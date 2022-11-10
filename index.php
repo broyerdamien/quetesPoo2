@@ -2,8 +2,8 @@
 // Bike
 require_once 'Bicycle.php';
 $bicycle = new bicycle('blue', 1);
-    echo $bicycle->forward();
-    var_dump($bicycle);
+echo $bicycle->forward();
+var_dump($bicycle);
 
 // $bike->setCurrentSpeed(0);
 // $bike->setNbSeats(1);
@@ -32,13 +32,15 @@ var_dump($car);
 require_once 'vehicle.php';
 
 require_once 'truck.php';
-$truck= new truck('green', 4, 'fuel', 1);
+$truck = new truck('green', 4, 'fuel', 1);
 echo $truck->forward();
 echo $truck->brake();
 var_dump($truck);
 echo '<br>';
 echo $truck->load();
 
+$vehicle = new Vehicle('grenn', 2);
 
-
-?>
+require_once 'MotorWay.php';
+$autoroute = new MotorWay();
+echo var_dump($autoroute);
